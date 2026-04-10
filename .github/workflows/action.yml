@@ -37,6 +37,7 @@ jobs:
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
+        continue-on-error: true
         with:
           files: |
             MyService/build/test-results/**/*.xml
